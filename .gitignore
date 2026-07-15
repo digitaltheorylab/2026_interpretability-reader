@@ -1,0 +1,7 @@
+_build/
+data/
+notebooks/
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml

@@ -1,0 +1,39 @@
+version: 1
+project:
+  id: c2954f5b-dff4-480e-aa96-0b87085aa1e3
+  title: Introduction to Interpretability for Language Models
+  description: Reader for the Digital Theory Lab's Summer 2026 Institute
+  authors: ["Tyler Shoemaker"]
+  github: https://github.com/digitaltheorylab/2026_interpretability-reader
+   
+  toc:
+    - file: chapters/index.md
+      title: About
+    - file: chapters/01_overview.md
+      title: Setup and Overview
+    # - file: chapters/02_inputs.md
+    #   title: Model Inputs
+    # - file: chapters/03_attention.md
+    #   title: Attention and Contextual Embeddings
+    # - file: chapters/04_outputs.md
+    #   title: Model Outputs
+    # - file: chapters/05_text.md
+    #   title: (Model) Text as Data
+    # - file: chapters/06_attribution.md
+    #   title: Attribution and Feature Analysis
+    # - file: chapters/07_metamodeling.md
+    #   title: Metamodeling Approaches
+    # - file: chapters/08_tbd.md
+    #   title: TBD
+
+  exclude:
+    - chapters/utils/**
+    - data/**
+    - notebooks/**
+    - src/**
+    
+site:
+  template: book-theme
+  options:
+    logo_text: Introduction to Interpretability for Language Models
+
