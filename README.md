@@ -35,8 +35,8 @@ the datasets:
 | Task                                          | Script                | Chapter(s) |
 |-----------------------------------------------|-----------------------|------------|
 | Generate genre-conditioned short stories      | `generate_stories.py` | 5          |
-| Run MCQA genre classification                 | `classify_mcqa.py`    | 6          |
-| Get hidden states from MCQA                   | `extract_hiddens.py`  | 6          |
+| Run MCQA genre classification                 | `classify_mcqa.py`    | 6, 7       |
+| Get hidden states from MCQA                   | `extract_hiddens.py`  | 6, 7       |
 | Fine-tune a linear genre classifier           | `train_probe.py`      | 7          |
 | Obtain token attributions from the classifier | `attribute_tokens.py` | 7          |
 
