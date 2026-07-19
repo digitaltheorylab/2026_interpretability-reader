@@ -6,7 +6,7 @@ Gradient token attributions for the fine-tuned genre head.
 
 Instead of backpropagating an answer-letter margin from the MCQA logits (as in
 ``mcqa.py``), we backpropagate a genre margin from a linear head trained on
-mean-pooled hidden states of stories (see ``finetune.py``).
+mean-pooled hidden states of stories (see ``train_probe.py``).
 
 For each story we:
   1. Embed the prompt tokens with gradients enabled
