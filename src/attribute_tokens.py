@@ -137,9 +137,7 @@ def genre_margin_attribution(
     return token_grad_norms.float().cpu().numpy(), predicted_genre
 
 
-def process_story(
-    story_id, text, true_genre, model, tokenizer, head, device
-):
+def process_story(story_id, text, true_genre, model, tokenizer, head, device):
     """Process one story end-to-end.
 
     Parameters
@@ -283,7 +281,9 @@ if __name__ == "__main__":
         description="Gradient token attributions for the fine-tuned genre head"
     )
     parser.add_argument("input", type=Path, help="Stories parquet")
-    parser.add_argument("head", type=Path, help="Head .npz from finetune.py")
+    parser.add_argument(
+        "head", type=Path, help="Head .npz from train_probe.py"
+    )
     parser.add_argument("output", type=Path, help="Output parquet")
     parser.add_argument(
         "-m",
@@ -297,7 +297,7 @@ if __name__ == "__main__":
         "--n-per-genre",
         type=int,
         default=100,
-        help="Number of stories per genre (must match finetune.py)",
+        help="Number of stories per genre",
     )
     parser.add_argument(
         "-s", "--seed", type=int, default=5167, help="Random seed"
