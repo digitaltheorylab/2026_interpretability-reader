@@ -23,7 +23,7 @@ The course runs Monday through Thursday, 10am-1pm EST from July 20-30.
 | 5   | M (7/27) | Text as data                       |
 | 6   | T (7/28) | Attribution and feature importance |
 | 7   | W (7/29) | Meta-modeling                      |
-| 8   | R (7/30) | Multimodality                      |
+| 8   | R (7/30) | TBD: Participants decide           |
 
 ## Prerequisites
 
