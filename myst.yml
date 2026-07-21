@@ -13,8 +13,8 @@ project:
       title: Setup and Overview
     - file: chapters/02_inputs.md
       title: Model Inputs
-    # - file: chapters/03_attention.md
-    #   title: Attention and Contextual Embeddings
+    - file: chapters/03_attention.md
+      title: Attention and Contextual Embeddings
     # - file: chapters/04_outputs.md
     #   title: Model Outputs
     # - file: chapters/05_text.md
