@@ -201,10 +201,10 @@ def attention(Q, K, V, mask=None):
     if mask is not None:
         scores = scores.masked_fill(mask == 0, float("-inf"))
 
-    # 4. Turn scores into probabilities via softmax
+    # 4. Normalize scores into attention weights via softmax 
     weights = F.softmax(scores, dim=-1)
 
-    # 5. Blend the value vectors with the probabilities using dot(weights, V)
+    # 5. Compute outputs as weighted sums of values using dot(weights, V)
     output = weights @ V
 
     return output, weights
@@ -219,7 +219,7 @@ help(attention)
 
 Now, let's make our `Q`, `K`, and `V`, matrices. Below, they're all the same
 thing: copies of the sequence embeddings. Once we've assigned those embeddings
-to each variable, we can run `attention()`
+to each variable, we can run `attention()`:
 
 ```{code-cell}
 Q = K = V = seq_emb
@@ -229,8 +229,8 @@ output, weights = attention(Q, K, V)
 Observe the shapes of inputs to and outputs from attention. Each of the input
 matrices is the same shape as our embeddings: $(t, d)$, where $t$ is the number
 of tokens in the input and $d$ is the vector dimension. So, too, is `output`:
-it represents a new version of our embeddings, which has had attention applied
-to it. But `weights` is different: it's a square matrix with the shape $(t,
+It represents a new version of our embeddings, which has had attention applied
+to it. But `weights` is different: It's a square matrix with the shape $(t,
 t)$.
 
 ```{code-cell}
@@ -239,9 +239,9 @@ print("Attention embedding shape:", list(output.shape))
 print("Attention weights shape:", list(weights.shape))
 ```
 
-Attention weights themselves are probabilities. They tell you how much a given
-token attends to other tokens in the input sequence (including itself). We'll
-construct a heatmap below to visualize these relationships.
+Attention weights tell you how much a given token attends to other tokens in
+the input sequence (including itself). We'll construct a heatmap below to
+visualize these relationships.
 
 First, though, let's make some labels. These are our input tokens. We'll decode
 the token IDs with the tokenizer and add them to `plot_config` as new keys. Our
