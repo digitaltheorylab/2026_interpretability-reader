@@ -17,7 +17,7 @@ import pandas as pd
 import torch
 from transformers import AutoModelForCausalLM
 
-from mcqa import capture_layer_last_token_states
+from classify_mcqa import capture_layer_last_token_states
 
 
 @torch.no_grad()
