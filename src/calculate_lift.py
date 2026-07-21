@@ -8,11 +8,8 @@ This script aggregates token-level gradient attributions into word-level "genre
 lift" scores. Lift measures how much more influential a word is in one genre
 compared to its average influence across other genres.
 
-Produce genre lift scores from the output of the gradient attribution.
-
 Usage:
     python calculate_lift.py <attributions.parquet> <gnere-lift.parquet>
-    python calculate_lift.py <attributions.parquet> <genre-lift.parquet>
 """
 
 import argparse
