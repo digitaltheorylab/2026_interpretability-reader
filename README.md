@@ -29,8 +29,14 @@ outputs, etc.) and build explanations on that basis.
 
 ## Making the Reader Data
 
-Scripts for making the reader data are under `src/`. Follow these steps to make
-the datasets:
+Scripts for making the reader data are under `src/`. To do this all in one go,
+run:
+
+```sh
+bash scripts/build-data.sh
+```
+
+Alternatively, run individual scripts:
 
 | Task                                          | Script                | Chapter(s) |
 |-----------------------------------------------|-----------------------|------------|
