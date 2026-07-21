@@ -39,5 +39,6 @@ the datasets:
 | Get hidden states from MCQA                   | `extract_hiddens.py`  | 6, 7       |
 | Fine-tune a linear genre classifier           | `train_probe.py`      | 7          |
 | Obtain token attributions from the classifier | `attribute_tokens.py` | 7          |
+| Calculate genre lift from token attributions  | `calculate_lift.py`   | 7          |
 
 Utilities for scripts are stored in `common.py`.
